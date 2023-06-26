@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Search_Dishes import views as SViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',SViews.index,name='index')
 ]
