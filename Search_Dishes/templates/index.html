@@ -1,22 +1,72 @@
-<form method="get" action="{% url 'index' %}">
-    {{ search_form }}
-    <button type="submit">Search</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .search-bar {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
 
-{% comment %} <form method="get" class="mb-3" id="search-form">
-    <div class="input-group">
-        {{ search_form }}
-        <button class="btn btn-success" type="submit" form="search-form">
-            <i class="fas fa-search"></i>
-        </button>
-        <a class="btn btn-danger ms-2" href="{% url 'index' %}"> Reset</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'index' %}">Search Application</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<div class="container">
+    <div class="search-bar">
+        <form class="form-inline" method="get" action="{% url 'index' %}">
+            {{ search_form }}
+            <button class="btn btn-primary" type="submit">Search</button>
+            <a class="btn btn-danger ms-2" href="{% url 'index' %}">
+                Reset
+            </a>
+        </form>
     </div>
-</form> {% endcomment %}
+</div>
 
-{% if results %}
-    <ul>
-    {% for result in results %}
-        <li>{{ result }}</li>
-    {% endfor %}
-    </ul>
-{% endif %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Restaurant Name</th>
+                        <th scope="col">Restaurant Location</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if results %}
+                        {% for it in results %}
+                            <tr>
+                                <td>{{ it.restaurant.name }}</td>
+                                <td>{{ it.restaurant.location}}</td>
+                                <td>{{ it.name }}</td>
+                                <td>{{ it.price }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="3">No results found.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

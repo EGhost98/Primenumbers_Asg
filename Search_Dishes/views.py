@@ -9,19 +9,23 @@ def index(request):
     template = 'index.html'
     context = {}
     search_form = Query(request.GET)
-    # if search_form.is_valid():
-    #     query = search_form.cleaned_data.get('query')
-    #     items = Item.objects.all()  # Retrieve all items from the database
-    #     item_names = [item.name for item in items]  # Extract the item names
-    #     results = process.extract(query, item_names, scorer=fuzz.ratio, limit=5)  # Limiting to 5 matches
-
-
-    #     # Extract the item names and similarity scores from the results
-    #     matched_items = [result[0].name for result in results]
-    #     similarity_scores = [result[1] for result in results]
-
-    #     context['matched_items'] = matched_items
-    #     context['similarity_scores'] = similarity_scores
-
+    search_form.fields['query'].label = False 
+    if search_form.is_valid():
+        query = search_form.cleaned_data.get('query')
+        items = Item.objects.all()  # Retrieve all items from the database
+        # items = Item.objects.values_list('name', flat=True)
+        results = process.extract(query, items, scorer=fuzz.partial_token_set_ratio, limit=5)  # Limiting to 5 matches
+        matched_items = []
+        similarity_scores = []
+        for result in results:
+            item = result[0]
+            similarity_score = result[1]
+            if(similarity_score<80 ):
+                continue
+            matched_items.append(item)
+            # similarity_scores.append(similarity_score)
+        restaurants = []
+        context['results'] = matched_items
+        # context['similarity_scores'] = similarity_scores
     context['search_form'] = search_form
     return render(request, template, context)
