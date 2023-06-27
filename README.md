@@ -1,4 +1,4 @@
-# Django Search Application Readme
+# Primenumbers Technologies Django Assignment
 
 This is a Django project that includes fuzzy search functionality for restaurant dishes.
 
@@ -29,6 +29,15 @@ To set up the project, follow these steps:
 - The fuzzy search algorithm uses the FuzzyWuzzy library with the Partial Token Set Ratio scorer.
 - The Partial Token Set Ratio scorer measures the similarity of the query to existing dish names based on partial string matching and tokenization.
 - Results will be displayed for dishes with a similarity score greater than or equal to 80 (out of 100).
+
+## Screenshots (With Query and it's Results)
+![Django Dish_Search (1)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/123aec96-32d4-44ef-b680-2688504163f4)
+![Django Dish_Search (2)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/b9912d63-650d-4e01-a50e-76b53a651e96)
+![Django Dish_Search (3)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/e852700c-5eec-4211-9496-a731803e3bb4)
+![Django Dish_Search (4)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/bd737127-2257-4619-a3ca-ffba365c5fc1)
+
+
+
 
 ## Project Structure
 
@@ -85,3 +94,15 @@ The `index` function is the view associated with the index page of the project. 
 9. The matched items are stored in the `results` variable.
 10. The `results` variable is added to the context dictionary to be passed to the template.
 11. The `search_form` is also added to the context dictionary to be used in the template for displaying the search form.
+
+## References
+
+These are some of the resources I used to complete this assignment:
+
+- [Django Documentation](https://docs.djangoproject.com/): The official documentation for Django, which provided guidance on building web applications using Django.
+- [FuzzyWuzzy Documentation](https://github.com/seatgeek/fuzzywuzzy): The official documentation for the FuzzyWuzzy library, which helped me implement fuzzy string matching for the search functionality.
+- [Pandas Documentation](https://pandas.pydata.org/docs/): The official documentation for the Pandas library, which I used for data manipulation and analysis when populating the database from a CSV file.
+- [Medium](https://medium.com/): An online publishing platform that provided tutorials and articles related to Django, FuzzyWuzzy, and other relevant topics.
+- [ChatGPT](https://openai.com/): An AI language model developed by OpenAI, which provided guidance and assistance during the development of this project.
+
+Feel free to refer to these resources for more information and detailed explanations about the topics covered in this assignment.
