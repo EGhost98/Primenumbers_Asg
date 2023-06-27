@@ -6,15 +6,17 @@ from django.views import View
 from .forms import Query
 
 def index(request):
+    # csv_path = 'Search_Dishes/restaurants_small.csv'
+    # Restaurant.DB_From_CSV(csv_path)
     template = 'index.html'
     context = {}
     search_form = Query(request.GET)
     search_form.fields['query'].label = False 
     if search_form.is_valid():
         query = search_form.cleaned_data.get('query')
-        items = Item.objects.all()  # Retrieve all items from the database
+        items = Item.objects.all()
         # items = Item.objects.values_list('name', flat=True)
-        results = process.extract(query, items, scorer=fuzz.partial_token_set_ratio, limit=5)  # Limiting to 5 matches
+        results = process.extract(query, items, scorer=fuzz.partial_token_set_ratio, limit=3) 
         matched_items = []
         similarity_scores = []
         for result in results:
