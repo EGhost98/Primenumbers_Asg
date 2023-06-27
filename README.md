@@ -28,7 +28,7 @@ To set up the project, follow these steps:
 - Use the search form to enter a query and find matching dishes.
 - The fuzzy search algorithm uses the FuzzyWuzzy library with the Partial Token Set Ratio scorer.
 - The Partial Token Set Ratio scorer measures the similarity of the query to existing dish names based on partial string matching and tokenization.
-- Results will be displayed for dishes with a similarity score greater than or equal to 80 (out of 100).
+- Results will be displayed for dishes with a similarity score greater than or equal to 80 (out of 100) in descending order.
 
 ## Screenshots (With Query and it's Results)
 ![Django Dish_Search (1)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/123aec96-32d4-44ef-b680-2688504163f4)
