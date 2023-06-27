@@ -94,3 +94,15 @@ The `index` function is the view associated with the index page of the project. 
 9. The matched items are stored in the `results` variable.
 10. The `results` variable is added to the context dictionary to be passed to the template.
 11. The `search_form` is also added to the context dictionary to be used in the template for displaying the search form.
+
+## References
+
+These are some of the resources I used to complete this assignment:
+
+- [Django Documentation](https://docs.djangoproject.com/): The official documentation for Django, which provided guidance on building web applications using Django.
+- [FuzzyWuzzy Documentation](https://github.com/seatgeek/fuzzywuzzy): The official documentation for the FuzzyWuzzy library, which helped me implement fuzzy string matching for the search functionality.
+- [Pandas Documentation](https://pandas.pydata.org/docs/): The official documentation for the Pandas library, which I used for data manipulation and analysis when populating the database from a CSV file.
+- [Medium](https://medium.com/): An online publishing platform that provided tutorials and articles related to Django, FuzzyWuzzy, and other relevant topics.
+- [ChatGPT](https://openai.com/): An AI language model developed by OpenAI, which provided guidance and assistance during the development of this project.
+
+Feel free to refer to these resources for more information and detailed explanations about the topics covered in this assignment.
