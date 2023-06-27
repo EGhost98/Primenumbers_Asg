@@ -33,6 +33,8 @@ To set up the project, follow these steps:
 ## Screenshots (With Query and it's Results)
 ![Django Dish_Search (1)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/123aec96-32d4-44ef-b680-2688504163f4)
 ![Django Dish_Search (2)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/b9912d63-650d-4e01-a50e-76b53a651e96)
+![Django Dish_Search (3)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/e852700c-5eec-4211-9496-a731803e3bb4)
+![Django Dish_Search (4)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/bd737127-2257-4619-a3ca-ffba365c5fc1)
 
 
 
