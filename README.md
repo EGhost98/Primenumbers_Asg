@@ -30,6 +30,14 @@ To set up the project, follow these steps:
 - The Partial Token Set Ratio scorer measures the similarity of the query to existing dish names based on partial string matching and tokenization.
 - Results will be displayed for dishes with a similarity score greater than or equal to 80 (out of 100).
 
+## Screenshots (With Query and it's Results)
+![Django Dish_Search (1)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/7ff419b7-b5c5-4bcc-aa03-896845910610)
+![Django Dish_Search (2)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/4d8c823b-4371-4e41-a345-44870a3ccf31)
+![Django Dish_Search (3)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/0519b049-069a-4fdc-96f9-5a56f84489ca)
+![Django Dish_Search (4)](https://github.com/EGhost98/Primenumbers_Asg/assets/76267623/828c055c-708e-457c-8708-0bf78a442092)
+
+
+
 ## Project Structure
 
 The project consists of the following files and directories:
