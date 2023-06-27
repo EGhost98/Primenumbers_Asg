@@ -1,4 +1,4 @@
-# Primenumbers Technologies Django Assignment README
+# Primenumbers Technologies Django Assignment
 
 This is a Django project that includes fuzzy search functionality for restaurant dishes.
 
